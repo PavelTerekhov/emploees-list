@@ -15,14 +15,13 @@ class SearchPanel extends Component {
         this.props.onUpdateSearch(term)
     }
 
-
     render() {
         return (
             <input type="text"
-                    className="form-control search-input"
-                    placeholder="Найти сотрудника"
-                    value={this.state.term}
-                    onChange={this.onUpdateSearch}/>
+                className="form-control search-input"
+                placeholder="Найти сотрудника"
+                value={this.state.term}
+                onChange={this.onUpdateSearch}/>
             )
         }
     } 

@@ -3,12 +3,9 @@
 import './employees-list-item.css';
 
 const EmployeesListItem = (props) => {
+const {name, salary, onDelete, onToggleProp, increase, rise} = props;
+let classNames = "list-group-item d-flex justify-content-between";
 
-
-    const {name, salary, onDelete, onToggleProp, increase, rise} = props;
-
-
-    let classNames = "list-group-item d-flex justify-content-between";
     if (increase) {
         classNames += ' increase';
     }
@@ -27,7 +24,6 @@ const EmployeesListItem = (props) => {
                     data-toggle="increase">
                     <i className="fas fa-cookie"></i>
                 </button>
-
                 <button type="button"
                         className="btn-trash btn-sm "
                         onClick={onDelete}>
